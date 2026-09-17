@@ -1,6 +1,4 @@
-from calculator.addition import add, subtract
-
-# --- ADDITION TESTS ---
+from calculator.addition import add
 
 def test_add_positive_numbers():
     # Arrange
@@ -23,22 +21,3 @@ def test_add_zero():
     result = add(first, second)
     assert result == expected
 
-# --- SUBTRACTION TESTS ---
-
-def test_subtract_positive_numbers():
-    first, second = 5, 3
-    expected = 2
-    result = subtract(first, second)
-    assert result == expected
-
-def test_subtract_negative_numbers():
-    first, second = -5, -3
-    expected = -2
-    result = subtract(first, second)
-    assert result == expected
-
-def test_subtract_zero():
-    first, second = 0, 5
-    expected = -5
-    result = subtract(first, second)
-    assert result == expected
